@@ -1,0 +1,77 @@
+<ion-view id="view-address-book" hide-tabs>
+  <ion-nav-bar class="bar-royal">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-title>
+      <span translate>New Apply</span>
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+      <button class="button no-animation button-icon icon ion-android-add" ui-sref="tabs.newContact">
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content scroll="false" id="add-address" ng-show="isEmptyList">
+    <div class="zero-state">
+      <i class="icon zero-state-icon">
+        <img class="svg" src="img/address-book-add.svg"/>
+      </i>
+      <div class="zero-state-heading" translate>No recommend friends yet</div>
+      <div class="zero-state-description" translate>You can bind a phone number, in order to find more friends.</div>
+      <div class="zero-state-cta">
+        <button class="button button-standard button-primary" ui-sref="tabs.newContact" translate>Add Or Invite Contacts</button>
+      </div>
+    </div>
+  </ion-content>
+  <ion-content ng-show="!isEmptyList">
+    <div class="bar bar-header item-input-inset">
+      <label class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input type="search"
+               placeholder="Search"
+               ng-model="addrSearch.value"
+               ng-change="findAddressbook(addrSearch.value)" ng-model-onblur>
+      </label>
+    </div>
+    <ion-list>
+        <div class="item item-divider" ng-show="!isEmptyNewFansList">
+         新的朋友
+        </div>
+        <ion-list ng-show="!isEmptyNewFansList">
+          <ion-item class="cts-new-item item item-icon-left" ng-repeat="fans in fanslist">
+            <div class="cts-new-item-pic rj-contacts-pic icon">
+                <img src="img/default.png" ng-src="{{fans.headimg}}">
+            </div>
+            <div class="cts-new-item-rc">
+              <span class="cts-new-contacts-name">{{fans.fans_name}}</span><br/>
+              <span class="cts-new-contacts-msg">hi! {{fans.fans_name}}</span>
+            </div>
+            <div class="cts-new-item-rb">
+              <button class="cts-new-item-btn button button-balanced button-small" ng-click="agreeAdd(fans)">添加</button>
+            </div>
+          </ion-item>
+        </ion-list>  
+
+        <div class="item item-divider" ng-show="!isEmptyFollowsList">
+          你的申请
+        </div>
+
+        <ion-list ng-show="!isEmptyFollowsList">  
+            <ion-item class="cts-new-item item item-icon-left" ng-repeat="follow in followslist">
+                <div class="cts-new-item-pic rj-contacts-pic icon">
+                    <img src="img/default.png">
+                </div>
+                <div class="cts-new-item-rc">
+                  <span class="cts-new-contacts-name">啊怪</span><br/>
+                  <span class="cts-new-contacts-msg">啊怪</span>
+                </div>
+                <div class="cts-new-item-rb">
+                  <button class="cts-new-item-btn button button-stable button-small">验证中</button>
+                </div>
+            </ion-item>
+          
+        </ion-list>  
+
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

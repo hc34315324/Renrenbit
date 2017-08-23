@@ -177,9 +177,10 @@ angular.module('copayApp.controllers').controller('tabSendController', function(
   };
 
   $scope.buyBitcoin = function() {
-    $state.go('tabs.home').then(function() {
-      $state.go('tabs.buyandsell');
-    });
+    popupService.showAlert("提示", "敬请期待！");
+    // $state.go('tabs.home').then(function() {
+    //   $state.go('tabs.buyandsell');
+    // });
   };
 
   $scope.$on("$ionicView.beforeEnter", function(event, data) {

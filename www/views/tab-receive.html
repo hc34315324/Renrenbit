@@ -1,5 +1,7 @@
 <ion-view id="tab-receive">
   <ion-nav-bar class="bar-royal">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
     <ion-nav-title>{{'Receive' | translate}}</ion-nav-title>
     <ion-nav-buttons side="secondary">
       <button class="button-share ng-hide" ng-show="wallets[0] && showShareButton" ng-click="shareAddress()">
@@ -60,7 +62,7 @@
       <i class="icon ion-ios-arrow-thin-right"></i>
     </div>
 
-    <div class="wallet-selector" ng-click="showWalletSelector()" ng-if="wallets[0] && wallet">
+    <div class="wallet-selector" ng-if="wallets[0] && wallet" ng-click="showWalletSelector()">
       <a ng-if="wallet" class="item item-sub item-icon-left item-big-icon-left item-icon-right">
         <i class="icon big-icon-svg">
           <img src="img/icon-wallet.svg" ng-class="{'wallet-background-color-default': !wallet.color}" ng-style="{'background-color': wallet.color}" class="bg wallet"/>

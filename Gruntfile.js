@@ -130,6 +130,7 @@ module.exports = function(grunt) {
           'bower_components/angular-md5/angular-md5.js',
           'bower_components/angular-mocks/angular-mocks.js',
           'bower_components/ngtouch/src/ngTouch.js',
+          'bower_components/elastic/elastic.js',
           'angular-bitauth/angular-bitauth.js',
           'angular-bitcore-wallet-client/angular-bitcore-wallet-client.js'
         ],
@@ -203,6 +204,36 @@ module.exports = function(grunt) {
         src: 'bower_components/ionic/release/js/ionic.bundle.min.js',
         dest: 'www/lib/'
       },
+      jquery:{
+        expand: true,
+        flatten: true,
+        src: 'bower_components/jquery/jquery-2.1.4.min.js',
+        dest: 'www/lib/'
+      },
+      jquery_py:{
+        expand: true,
+        flatten: true,
+        src: 'bower_components/jquery/jquery.charfirst.pinyin.js',
+        dest: 'www/lib/'
+      },
+      workerman_ws:{
+        expand: true,
+        flatten: true,
+        src: 'bower_components/workerman/web_socket.js',
+        dest: 'www/lib/'
+      },
+      workerman_swf:{
+        expand: true,
+        flatten: true,
+        src: 'bower_components/workerman/swfobject.js',
+        dest: 'www/lib/'
+      },
+      workerman_swf_file:{
+        expand: true,
+        flatten: true,
+        src: 'bower_components/workerman/WebSocketMain.swf',
+        dest: 'www/lib/'
+      },
       linux: {
         files: [{
           expand: true,
@@ -254,7 +285,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('default', ['nggettext_compile', 'exec:appConfig', 'exec:externalServices', 'browserify', 'sass', 'concat', 'copy:ionic_fonts', 'copy:ionic_js']);
+  grunt.registerTask('default', ['nggettext_compile', 'exec:appConfig', 'exec:externalServices', 'browserify', 'sass', 'concat', 'copy:ionic_fonts', 'copy:ionic_js', 'copy:jquery', 'copy:jquery_py', 'copy:workerman_ws', 'copy:workerman_swf', 'copy:workerman_swf_file']);
   grunt.registerTask('prod', ['default', 'uglify']);
   grunt.registerTask('translate', ['nggettext_extract']);
   grunt.registerTask('desktop', ['prod', 'nwjs', 'copy:linux', 'compress:linux']);

@@ -12,7 +12,15 @@ angular.module('copayApp.services').factory('configService', function(storageSer
 
     // Bitcore wallet service URL
     bws: {
-      url: 'https://bws.bitpay.com/bws/api',
+      url: 'http://192.168.1.5:3232/bws/api',      //https://bws.bitpay.com/bws/api
+    },
+
+    //renrenbit相关配置
+    renrenbit: {
+      development: {      //开发环境
+        // url:'http://api.dev.com/',
+        url:'http://192.168.1.5/',
+      },
     },
 
     download: {

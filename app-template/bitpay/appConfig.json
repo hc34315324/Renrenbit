@@ -2,6 +2,7 @@
   "packageName": "bitpay",
   "packageDescription": "Secure Bitcoin Wallet",
   "packageNameId": "com.bitpay.wallet",
+  "statusBarColor": "#192c3a",
   "userVisibleName": "BitPay",
   "purposeLine": "Secure Bitcoin Wallet",
   "bundleName": "wallet",

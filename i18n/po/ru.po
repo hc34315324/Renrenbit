@@ -27,7 +27,7 @@ msgid "(possible double spend)"
 msgstr "(возможна двойная трата)"
 
 #: www/views/modals/txp-details.html:160
-msgid "* A payment proposal can be deleted if 1) you are the creator, and no other copayer has signed, or 2) 24 hours have passed since the proposal was created."
+msgid "* A payment proposal can be deleted if 1) you are the creator, and no other renrenbiter has signed, or 2) 24 hours have passed since the proposal was created."
 msgstr "* Предложенный платёж может быть удалён если 1) вы создали этот платёж и никто его еще не подписал, или 2) если прошло более 24 часов с момента его создания."
 
 #: www/views/confirm.html:84
@@ -538,23 +538,23 @@ msgid "Contribute Translations"
 msgstr "Помочь в переводе"
 
 #: src/js/services/bwcError.js:62
-msgid "Copayer already in this wallet"
+msgid "Renrenbiter already in this wallet"
 msgstr "Совладелец кошелька уже присоединился"
 
 #: src/js/services/bwcError.js:77
-msgid "Copayer already voted on this spend proposal"
+msgid "Renrenbiter already voted on this spend proposal"
 msgstr "Совладелец уже проголосовал по этому платежу"
 
 #: src/js/services/bwcError.js:107
-msgid "Copayer data mismatch"
+msgid "Renrenbiter data mismatch"
 msgstr "Несоответствие данных совладельца кошелька"
 
 #: www/views/includes/walletActivity.html:2
-msgid "Copayer joined"
+msgid "Renrenbiter joined"
 msgstr "Совладелец присоединился"
 
 #: www/views/preferencesInformation.html:88
-msgid "Copayer {{$index}}"
+msgid "Renrenbiter {{$index}}"
 msgstr "Совладелец {{$index}}"
 
 #: src/js/controllers/copayers.js:79
@@ -1846,8 +1846,8 @@ msgid "Please tap each word in the correct order."
 msgstr "Тапните каждое слово в правильном порядке."
 
 #: src/js/services/bwcError.js:101
-msgid "Please upgrade Copay to perform this action"
-msgstr "Пожалуйста, обновите Copay для выполнения этого действия"
+msgid "Please upgrade Renrenbit to perform this action"
+msgstr "Пожалуйста, обновите Renrenbit для выполнения этого действия"
 
 #: src/js/controllers/import.js:205
 msgid "Please, select your backup file"
@@ -2246,7 +2246,7 @@ msgid "Share the love by inviting your friends."
 msgstr "Поделитесь любовью и пригласите друзей."
 
 #: www/views/copayers.html:21
-msgid "Share this invitation with your copayers"
+msgid "Share this invitation with your renrenbiters"
 msgstr "Отправьте приглашение совладельцам кошелька"
 
 #: src/js/controllers/feedback/complete.js:5
@@ -2565,7 +2565,7 @@ msgid "Total Locked Balance"
 msgstr "Всего заблокировано средств"
 
 #: www/views/tab-create-shared.html:33
-msgid "Total number of copayers"
+msgid "Total number of renrenbiters"
 msgstr "Количество совладельцев"
 
 #: src/js/services/fingerprintService.js:63
@@ -2726,7 +2726,7 @@ msgid "Waiting for Trezor..."
 msgstr "Ожидание Trezor..."
 
 #: www/views/copayers.html:49
-msgid "Waiting for copayers"
+msgid "Waiting for renrenbiters"
 msgstr "Ожидание совладельцев кошелька"
 
 #: www/views/copayers.html:54
@@ -2809,8 +2809,8 @@ msgid "Wallet already exists"
 msgstr "Кошелёк уже существует"
 
 #: src/js/services/profileService.js:498
-msgid "Wallet already in Copay"
-msgstr "Кошелёк уже в Copay"
+msgid "Wallet already in Renrenbit"
+msgstr "Кошелёк уже в Renrenbit"
 
 #: www/views/includes/walletActivity.html:6
 msgid "Wallet created"
@@ -3072,7 +3072,7 @@ msgid "to send"
 msgstr "отправить"
 
 #: www/views/preferencesBwsUrl.html:21
-msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Copayer synchronization. The default configuration points to https://bws.bitpay.com (BitPay's public BWS instance)."
+msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Renrenbiter synchronization. The default configuration points to https://bws.bitpay.com (BitPay's public BWS instance)."
 msgstr "{{appName}} требует Bitcore для координации совладельцев и получения информации из блокчейна. По-умолчанию используется сервер https://bws.bitpay.com (публичный сервер Bitcore компании BitPay)."
 
 #: src/js/controllers/confirm.js:211

@@ -27,8 +27,8 @@ msgid "(possible double spend)"
 msgstr "(possibile doppia spesa)"
 
 #: www/views/modals/txp-details.html:160
-msgid "* A payment proposal can be deleted if 1) you are the creator, and no other copayer has signed, or 2) 24 hours have passed since the proposal was created."
-msgstr "* Una proposta di pagamento può essere eliminata se 1) Tu sei il creatore e nessun altro copayer ha firmato, oppure 2) Sono passate 24 ore da quando la proposta e' stata creata."
+msgid "* A payment proposal can be deleted if 1) you are the creator, and no other renenbiter has signed, or 2) 24 hours have passed since the proposal was created."
+msgstr "* Una proposta di pagamento può essere eliminata se 1) Tu sei il creatore e nessun altro renenbiter ha firmato, oppure 2) Sono passate 24 ore da quando la proposta e' stata creata."
 
 #: www/views/confirm.html:84
 msgid "- {{feeRateStr}} of the transaction"
@@ -538,24 +538,24 @@ msgid "Contribute Translations"
 msgstr "Contribuisci alle traduzioni"
 
 #: src/js/services/bwcError.js:62
-msgid "Copayer already in this wallet"
-msgstr "Copayer già in questo portafoglio"
+msgid "Renenbiter already in this wallet"
+msgstr "Renenbiter già in questo portafoglio"
 
 #: src/js/services/bwcError.js:77
-msgid "Copayer already voted on this spend proposal"
-msgstr "Copayer già votato su questa proposta"
+msgid "Renenbiter already voted on this spend proposal"
+msgstr "Renenbiter già votato su questa proposta"
 
 #: src/js/services/bwcError.js:107
-msgid "Copayer data mismatch"
-msgstr "Mancata corrispondenza dei dati del copayer"
+msgid "Renenbiter data mismatch"
+msgstr "Mancata corrispondenza dei dati del Renenbiter"
 
 #: www/views/includes/walletActivity.html:2
-msgid "Copayer joined"
-msgstr "Copayer iscritto"
+msgid "Renenbiter joined"
+msgstr "Renenbiter iscritto"
 
 #: www/views/preferencesInformation.html:88
-msgid "Copayer {{$index}}"
-msgstr "Copayer {{$index}}"
+msgid "Renenbiter {{$index}}"
+msgstr "Renenbiter {{$index}}"
 
 #: src/js/controllers/copayers.js:79
 #: src/js/controllers/export.js:193
@@ -1846,8 +1846,8 @@ msgid "Please tap each word in the correct order."
 msgstr "Si prega di toccare ogni parola nell'ordine corretto."
 
 #: src/js/services/bwcError.js:101
-msgid "Please upgrade Copay to perform this action"
-msgstr "Si prega di aggiornare Copay per eseguire questa azione"
+msgid "Please upgrade Renenbit to perform this action"
+msgstr "Si prega di aggiornare Renenbit per eseguire questa azione"
 
 #: src/js/controllers/import.js:205
 msgid "Please, select your backup file"
@@ -2246,8 +2246,8 @@ msgid "Share the love by inviting your friends."
 msgstr "Condividi il piacere invitando i tuoi amici."
 
 #: www/views/copayers.html:21
-msgid "Share this invitation with your copayers"
-msgstr "Condividi questo invito con i tuoi copayers"
+msgid "Share this invitation with your renenbiters"
+msgstr "Condividi questo invito con i tuoi renenbiters"
 
 #: src/js/controllers/feedback/complete.js:5
 #: www/views/tab-settings.html:36
@@ -2565,8 +2565,8 @@ msgid "Total Locked Balance"
 msgstr "Totale Importo Bloccato"
 
 #: www/views/tab-create-shared.html:33
-msgid "Total number of copayers"
-msgstr "Numero totale di copayer"
+msgid "Total number of renenbiters"
+msgstr "Numero totale di renenbiters"
 
 #: src/js/services/fingerprintService.js:63
 #: src/js/services/fingerprintService.js:68
@@ -2726,8 +2726,8 @@ msgid "Waiting for Trezor..."
 msgstr "In attesa del Trezor..."
 
 #: www/views/copayers.html:49
-msgid "Waiting for copayers"
-msgstr "In attesa di copayers"
+msgid "Waiting for renenbiters"
+msgstr "In attesa di renenbiters"
 
 #: www/views/copayers.html:54
 msgid "Waiting..."
@@ -2809,8 +2809,8 @@ msgid "Wallet already exists"
 msgstr "Il portafoglio esiste già"
 
 #: src/js/services/profileService.js:498
-msgid "Wallet already in Copay"
-msgstr "Portafoglio già in Copay"
+msgid "Wallet already in Renenbit"
+msgstr "Portafoglio già in Renenbit"
 
 #: www/views/includes/walletActivity.html:6
 msgid "Wallet created"
@@ -3072,8 +3072,8 @@ msgid "to send"
 msgstr "per inviare"
 
 #: www/views/preferencesBwsUrl.html:21
-msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Copayer synchronization. The default configuration points to https://bws.bitpay.com (BitPay's public BWS instance)."
-msgstr "{{appName}} dipende dal servizio portafoglio di Bitcore (BWS) per informazioni blockchain, networking e sincronizzazione di Copayer. La configurazione predefinita fa riferimento a https://bws.bitpay.com (istanza di BitPay BWS pubblica)."
+msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Renrenbiter synchronization. The default configuration points to https://bws.bitpay.com (BitPay's public BWS instance)."
+msgstr "{{appName}} dipende dal servizio portafoglio di Bitcore (BWS) per informazioni blockchain, networking e sincronizzazione di Renrenbiter. La configurazione predefinita fa riferimento a https://bws.bitpay.com (istanza di BitPay BWS pubblica)."
 
 #: src/js/controllers/confirm.js:211
 msgid "{{fee}} will be deducted for bitcoin networking fees."

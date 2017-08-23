@@ -18,7 +18,7 @@ msgid "(possible double spend)"
 msgstr ""
 
 #: www/views/modals/txp-details.html:160
-msgid "* A payment proposal can be deleted if 1) you are the creator, and no other copayer has signed, or 2) 24 hours have passed since the proposal was created."
+msgid "* A payment proposal can be deleted if 1) you are the creator, and no other renrenbiter has signed, or 2) 24 hours have passed since the proposal was created."
 msgstr ""
 
 #: www/views/confirm.html:84
@@ -127,6 +127,19 @@ msgstr ""
 #: www/views/tab-settings.html:13
 msgid "Address Book"
 msgstr ""
+
+#: www/views/newContacts.html:6
+msgid "new contacts"
+msgstr ""
+
+#: www/views/newApplyContacts.html:6
+msgid "Add Or Invite Contacts"
+msgstr ""
+
+#: www/views/newApplyContacts.html:19
+msgid "You can bind a phone number, in order to find more friends."
+msgstr ""
+
 
 #: www/views/preferencesInformation.html:35
 msgid "Address Type"
@@ -529,23 +542,23 @@ msgid "Contribute Translations"
 msgstr ""
 
 #: src/js/services/bwcError.js:62
-msgid "Copayer already in this wallet"
+msgid "Renrenbiter already in this wallet"
 msgstr ""
 
 #: src/js/services/bwcError.js:77
-msgid "Copayer already voted on this spend proposal"
+msgid "Renrenbiter already voted on this spend proposal"
 msgstr ""
 
 #: src/js/services/bwcError.js:107
-msgid "Copayer data mismatch"
+msgid "Renrenbiter data mismatch"
 msgstr ""
 
 #: www/views/includes/walletActivity.html:2
-msgid "Copayer joined"
+msgid "Renrenbiter joined"
 msgstr ""
 
 #: www/views/preferencesInformation.html:88
-msgid "Copayer {{$index}}"
+msgid "Renrenbiter {{$index}}"
 msgstr ""
 
 #: src/js/controllers/copayers.js:79
@@ -1171,6 +1184,10 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
+#: www/views/tabs.html:26
+msgid "Message"
+msgstr ""
+
 #: src/js/controllers/feedback/send.js:61
 #: src/js/controllers/feedback/send.js:65
 #: src/js/controllers/feedback/send.js:69
@@ -1548,6 +1565,10 @@ msgstr ""
 msgid "No contacts yet"
 msgstr ""
 
+#: www/views/newApplyContacts.html:19
+msgid "No recommend friends yet"
+msgstr ""
+
 #: www/views/preferencesExternal.html:12
 msgid "No hardware information available."
 msgstr ""
@@ -1837,7 +1858,7 @@ msgid "Please tap each word in the correct order."
 msgstr ""
 
 #: src/js/services/bwcError.js:101
-msgid "Please upgrade Copay to perform this action"
+msgid "Please upgrade Renrenbit to perform this action"
 msgstr ""
 
 #: src/js/controllers/import.js:205
@@ -1931,6 +1952,11 @@ msgstr ""
 msgid "Read more"
 msgstr ""
 
+#: www/views/tab-imcontacts.html:3
+#: www/views/tabs.html:7
+msgid "Contacts"
+msgstr ""
+
 #: www/views/tab-receive.html:3
 #: www/views/tabs.html:7
 msgid "Receive"
@@ -1997,6 +2023,18 @@ msgstr ""
 
 #: www/views/preferencesAbout.html:9
 msgid "Release information"
+msgstr ""
+
+#: www/views/addressbook.view.html:6
+msgid "User Info"
+msgstr ""
+
+#: www/views/addressbook.view.html:36
+msgid "Add"
+msgstr ""
+
+#: www/views/newApplyContacts.html:6
+msgid "New Apply"
 msgstr ""
 
 #: www/views/addressbook.view.html:36
@@ -2109,6 +2147,10 @@ msgstr ""
 
 #: www/views/preferencesAltCurrency.html:14
 msgid "Search your currency"
+msgstr ""
+
+#: www/views/newContacts.html:20
+msgid "Search Input Phone number or username"
 msgstr ""
 
 #: www/views/preferences.html:35
@@ -2237,7 +2279,7 @@ msgid "Share the love by inviting your friends."
 msgstr ""
 
 #: www/views/copayers.html:21
-msgid "Share this invitation with your copayers"
+msgid "Share this invitation with your renrenbiters"
 msgstr ""
 
 #: src/js/controllers/feedback/complete.js:5
@@ -2556,7 +2598,7 @@ msgid "Total Locked Balance"
 msgstr ""
 
 #: www/views/tab-create-shared.html:33
-msgid "Total number of copayers"
+msgid "Total number of renrenbiters"
 msgstr ""
 
 #: src/js/services/fingerprintService.js:63
@@ -2717,11 +2759,15 @@ msgid "Waiting for Trezor..."
 msgstr ""
 
 #: www/views/copayers.html:49
-msgid "Waiting for copayers"
+msgid "Waiting for renrenbiters"
 msgstr ""
 
 #: www/views/copayers.html:54
 msgid "Waiting..."
+msgstr ""
+
+#: www/views/tabs.html:34
+msgid "Wallet"
 msgstr ""
 
 #: www/views/addresses.html:3
@@ -2800,7 +2846,7 @@ msgid "Wallet already exists"
 msgstr ""
 
 #: src/js/services/profileService.js:498
-msgid "Wallet already in Copay"
+msgid "Wallet already in Renrenbit"
 msgstr ""
 
 #: www/views/includes/walletActivity.html:6
@@ -2990,6 +3036,22 @@ msgstr ""
 msgid "Your bitcoin wallet is backed up!"
 msgstr ""
 
+#: www/views/tab-home.html:3
+msgid "Wallet"
+msgstr ""
+
+#: www/views/tab-home.html:113
+msgid "Send BitCoin"
+msgstr ""
+
+#: www/views/tab-home.html:119
+msgid "Receive BitCoin"
+msgstr ""
+
+#: www/views/tab-home.html:125
+msgid "Scan QRCode"
+msgstr ""
+
 #: www/views/tab-home.html:35
 msgid "Your bitcoin wallet is ready!"
 msgstr ""
@@ -3063,7 +3125,7 @@ msgid "to send"
 msgstr ""
 
 #: www/views/preferencesBwsUrl.html:21
-msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Copayer synchronization. The default configuration points to https://bws.bitpay.com (BitPay's public BWS instance)."
+msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Renrenbiter synchronization. The default configuration points to https://bws.bitpay.com (BitPay's public BWS instance)."
 msgstr ""
 
 #: src/js/controllers/confirm.js:211

@@ -1,0 +1,185 @@
+{
+    "messages": [{
+        "id": 8,
+        "fName": "李明",
+        "fHead": "img/adam.jpg",
+        "lstMsg": {
+            "originalTime": "2015-11-27 06:34:55",
+            "time": "",
+            "timeFrom1970": 0,
+            "content": "你在干什么?",
+            "isFromMe": 0
+        },
+        "noReadMessages": 2,
+        "showHints": 1,
+        "isTop": 0,
+        "message": [{
+            "isFromMe": 0,
+            "isMsgShow": 1,
+            "content": "你好!",
+            "time": "2015-11-22 08:50:22"
+        }, {
+            "isFromMe": 1,
+            "isMsgShow": 1,
+            "content": "你好, 你是谁?",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromMe": 0,
+            "isMsgShow": 1,
+            "content": "你在干什么?",
+            "time": "2015-11-27 06:34:55"
+        }, {
+            "isFromMe": 1,
+            "isMsgShow": 1,
+            "content": "知道怎么搞的吗?",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromMe": 0,
+            "isMsgShow": 1,
+            "content": "这是一道可以测出一个人有没有商业头脑的数学题",
+            "time": "2015-11-27 06:34:55"
+        }, {
+            "isFromMe": 0,
+            "isMsgShow": 1,
+            "content": "喝咖啡对身体好吗?",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromMe": 0,
+            "isMsgShow": 1,
+            "content": "在澳洲申请新西兰签证",
+            "time": "2015-11-27 06:34:55"
+        }, {
+            "isFromMe": 1,
+            "isMsgShow": 1,
+            "content": "说走就走的旅行",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromMe": 0,
+            "isMsgShow": 1,
+            "content": "ok",
+            "time": "2015-11-27 06:34:55"
+        }, {
+            "isFromMe": 1,
+            "isMsgShow": 1,
+            "content": "拉玛西亚",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromMe": 1,
+            "isMsgShow": 1,
+            "content": "拉玛西亚影视学院招生简章",
+            "time": "2015-11-27 06:34:55"
+        }, {
+            "isFromMe": 1,
+            "isMsgShow": 1,
+            "content": "去黑头产品排行榜",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromMe": 0,
+            "isMsgShow": 1,
+            "content": "美国大使馆 北京",
+            "time": "2015-11-27 06:34:55"
+        }, {
+            "isFromMe": 0,
+            "isMsgShow": 1,
+            "content": "被开水烫伤怎么办?",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromMe": 0,
+            "isMsgShow": 1,
+            "content": "谁说菜鸟不会数据分析?",
+            "time": "2015-11-27 06:34:55"
+        }, {
+            "isFromMe": 1,
+            "isMsgShow": 1,
+            "content": "谁念西风独自凉",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromMe": 0,
+            "isMsgShow": 1,
+            "content": "被酒莫惊春睡重，赌书消得泼茶香，当时只道是寻常",
+            "time": "2015-11-27 06:34:55"
+        }]
+    }, {
+        "id": 1,
+        "fName": "王峰",
+        "fHead": "img/ben.png",
+        "lstMsg": {
+            "originalTime": "2015-11-26 5:22:55",
+            "time": "",
+            "timeFrom1970": 0,
+            "content": "明天什么时候去吃饭?",
+            "isFromMe": 0
+        },
+        "noReadMessages": 5,
+        "showHints": 1,
+        "isTop": 0,
+        "message": [{
+            "isFromMe": 0,
+            "content": "你好!",
+            "time": "2015-11-22 08:50:22"
+        }, {
+            "isFromMe": 1,
+            "content": "你好, 你是谁?",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromMe": 0,
+            "content": "明天什么时候去吃饭?",
+            "time": "2015-11-26 5:22:55"
+        }]
+    }, {
+        "id": 7,
+        "fName": "潘敏",
+        "fHead": "img/max.png",
+        "lstMsg": {
+            "originalTime": "2015-11-22 15:34:55",
+            "time": "",
+            "timeFrom1970": 0,
+            "content": "我就在软件园?",
+            "isFromMe": 0
+        },
+        "noReadMessages": 0,
+        "showHints": 0,
+        "isTop": 0,
+        "message": [{
+            "isFromMe": 0,
+            "content": "你好!",
+            "time": "2015-11-22 08:50:22"
+        }, {
+            "isFromMe": 1,
+            "content": "你好, 你是谁?",
+            "time": "2015-11-22 08:51:02"
+        }, {
+            "isFromMe": 0,
+            "content": "我就在软件园?",
+            "time": "2015-11-22 15:34:55"
+        }]
+    }, {
+        "id": 2,
+        "fName": "王振启",
+        "fHead": "img/mike.png",
+        "lstMsg": {
+            "originalTime": "2015-11-21 15:34:55",
+            "time": "",
+            "timeFrom1970": 0,
+            "content": "周末有什么安排?",
+            "isFromMe": 0
+        },
+        "noReadMessages": 20,
+        "showHints": 1,
+        "isTop": 0
+    }, {
+        "id": 6,
+        "fName": "许仁杰",
+        "fHead": "img/perry.png",
+        "lstMsg": {
+            "originalTime": "2014-10-12 15:34:55",
+            "time": "",
+            "timeFrom1970": 0,
+            "content": "好",
+            "isFromMe": 0
+        },
+        "noReadMessages": 0,
+        "showHints": 0,
+        "isTop": 0
+    }]
+}

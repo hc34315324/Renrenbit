@@ -1,6 +1,6 @@
 <ion-view id="tab-home">
   <ion-nav-bar class="bar-royal">
-    <ion-nav-title><img class="tab-home__logo" src="img/app/logo-negative.svg"></ion-nav-title>
+    <ion-nav-title>{{'Wallet' | translate}}</ion-nav-title>
   </ion-nav-bar>
 
   <ion-content>
@@ -21,7 +21,7 @@
         <span translate>Download</span>
       </div>
     </div>
-
+<!--
     <div class="ng-hide" ng-show="showRateCard.value" ng-include="'views/feedback/rateCard.html'"></div>
     <div class="list card homeTip" ng-if="homeTip">
       <div class="item item-icon-right item-heading">
@@ -38,9 +38,9 @@
       <div class="subtitle" translate>
         On this screen you can see all your wallets, accounts, and assets.
       </div>
-    </div>
+    </div>-->
 
-    <div class="list card" ng-hide="!txps[0]">
+    <!--<div class="list card" ng-hide="!txps[0]">
       <a class="item item-icon-right item-heading" ui-sref="tabs.proposals">
         {{'Payment Proposals'|translate}}
         <i class="icon bp-arrow-right"></i>
@@ -61,12 +61,12 @@
       <a class="item item-sub activity" ng-repeat="notification in notifications" ng-click="openNotificationModal(notification)">
         <span ng-include="'views/includes/walletActivity.html'"></span>
       </a>
-    </div>
+    </div>-->
 
     <div class="list card">
       <div class="item item-icon-right item-heading">
         <span translate>Wallets</span>
-        <a ui-sref="tabs.add" ng-if="wallets[0]"><i class="icon ion-ios-plus-empty list-add-button"></i></a>
+        <!--<a ui-sref="tabs.add" ng-if="wallets[0]"><i class="icon ion-ios-plus-empty list-add-button"></i></a>-->
       </div>
       <div>
         <a ng-if="!wallets[0]" ui-sref="tabs.add" class="item item-icon-left item-big-icon-left item-icon-right next-step">
@@ -105,10 +105,31 @@
         </a>
       </div>
     </div>
-    <div class="ng-hide" ng-show="wallets[0] && bitpayCardItems.length>0" ng-include="'views/includes/bitpayCardsCard.html'"></div>
+
+    <div class="list card">
+
+        <a class="item item-icon-left item-icon-right" ui-sref="tabs.send">
+          <i class="icon  ion-paper-airplane"></i>
+          <span translate>Send BitCoin</span>
+          <i class="icon bp-arrow-right"></i>
+        </a>
+
+        <a class="item item-icon-left item-icon-right" ui-sref="tabs.receive">
+          <i class="icon ion-code-download"></i>
+          <span translate>Receive BitCoin</span>
+          <i class="icon bp-arrow-right"></i>
+        </a>
+
+        <a class="item item-icon-left item-icon-right" ui-sref="tabs.scan">
+          <i class="icon ion-qr-scanner"></i>
+          <span translate>Scan QRCode</span>
+          <i class="icon bp-arrow-right"></i>
+        </a>
+      </div>
+    <!--<div class="ng-hide" ng-show="wallets[0] && bitpayCardItems.length>0" ng-include="'views/includes/bitpayCardsCard.html'"></div>
     <div class="ng-hide" ng-show="wallets[0] && buyAndSellItems.length>0" ng-include="'views/includes/buyAndSellCard.html'"></div>
     <div class="ng-hide" ng-show="homeIntegrations.length>0" ng-include="'views/includes/homeIntegrations.html'"></div>
-    <div class="ng-hide" ng-show="nextStepsItems.length>0" ng-include="'views/includes/nextSteps.html'"></div>
+    <div class="ng-hide" ng-show="nextStepsItems.length>0" ng-include="'views/includes/nextSteps.html'"></div>-->
 
   </ion-content>
 </ion-view>

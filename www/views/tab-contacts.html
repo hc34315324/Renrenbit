@@ -1,0 +1,127 @@
+<ion-view>    
+    <ion-header-bar align-title="left" class="bar-royal">
+	    <div class="h1 title">联系人</div>
+	    <div class="buttons">
+	        <button class="button no-animation button-icon icon ion-android-search">
+	        </button>
+	        <button class="button no-animation button-icon icon ion-android-add" ui-sref="tabs.newContact">
+	        </button>
+	    </div>
+	</ion-header-bar>
+
+    <ion-content on-swipe-left="onSwipeLeft()" on-swipe-right="onSwipeRight()">
+        <div class="list-content">
+            <ion-list class="rj-list-func">
+                <ion-item class="item rj-item-func" ng-click="goNewApplyContacts()">
+                    <div class="rj-contacts-pic rj-orange-bgc">
+                        <i class="ion-person-add"></i>
+                    </div>
+                    <h2>新的朋友</h2>
+                    <span class="rj-ct-sm-red-icon" ng-show="showNewFriendHints"><p ng-bind="newFans"></p></span>
+                </ion-item>
+                <ion-item class="item rj-item-func" ng-click="goAddAddressbook()">
+                    <div class="rj-contacts-pic rj-green-bgc">
+                        <i class="ion-ios-paper"></i>
+                    </div>
+                    <h2>站外地址簿</h2>
+                </ion-item>
+                <!--<ion-item class="rj-item">
+                    <div class="rj-contacts-pic rj-blue-bgc">
+                        <i class="ion-ios-pricetag"></i>
+                    </div>
+                    <h2>标签</h2>
+                </ion-item>
+                <ion-item class="rj-item">
+                    <div class="rj-contacts-pic rj-blue-bgc">
+                        <i class="ion-person-add"></i>
+                    </div>
+                    <h2>公众号</h2>
+                </ion-item>-->
+            </ion-list>
+            <ion-list class="rj-list" ng-show="isContactsShow">
+                
+                <!--<ion-item ng-repeat="addrEntry in addressbook"
+                        class="item-icon-right item-avatar"
+                        ui-sref="tabs.addressbook.view({address:addrEntry.address, email: addrEntry.email, name: addrEntry.name})">
+                    <img src="img/contact-placeholder.svg" class="bg"/ ng-if="isChromeApp">
+                    <gravatar name="{{addrEntry.name}}" width="50" email="{{addrEntry.email}}" ng-if="!isChromeApp"></gravatar>
+                    <h2>{{addrEntry.name}}</h2>
+                    <p>{{addrEntry.address}}</p>
+                    <i class="icon bp-arrow-right"></i>
+                </ion-item>-->
+
+                <ion-item class="rj-item" ng-repeat="contactEntry in contactArray" ng-click="contactToOne(contactEntry)">
+                    <div class="rj-contacts-pic">
+                        <img src="img/default.png" ng-src="{{contactEntry.headimg}}">
+                    </div>
+                    <h2 class="num_name">{{contactEntry.follower_name}}</h2>
+                </ion-item>
+                <!--<ion-item class="rj-item">
+                    <div class="rj-contacts-pic">
+                        <img src="img/default.png">
+                    </div>
+                    <h2 class="num_name">李明</h2>
+                </ion-item>
+                <ion-item class="rj-item">
+                    <div class="rj-contacts-pic">
+                        <img src="img/default.png">
+                    </div>
+                    <h2 class="num_name">王刚</h2>
+                </ion-item>
+                <ion-item class="rj-item">
+                    <div class="rj-contacts-pic">
+                        <img src="img/default.png">
+                    </div>
+                    <h2 class="num_name">李白</h2>
+                </ion-item>
+                <ion-item class="rj-item">
+                    <div class="rj-contacts-pic">
+                        <img src="img/default.png">
+                    </div>
+                    <h2 class="num_name">杨光</h2>
+                </ion-item>
+                <ion-item class="rj-item">
+                    <div class="rj-contacts-pic">
+                        <img src="img/default.png">
+                    </div>
+                    <h2 class="num_name">赵中向</h2>
+                </ion-item>
+                <ion-item class="rj-item">
+                    <div class="rj-contacts-pic">
+                        <img src="img/default.png">
+                    </div>
+                    <h2 class="num_name">黄啦啦</h2>
+                </ion-item>
+                <ion-item class="rj-item">
+                    <div class="rj-contacts-pic">
+                        <img src="img/default.png">
+                    </div>
+                    <h2 class="num_name">刘哈哈</h2>
+                </ion-item>
+                <ion-item class="rj-item">
+                    <div class="rj-contacts-pic">
+                        <img src="img/default.png">
+                    </div>
+                    <h2 class="num_name">柳哼哼</h2>
+                </ion-item>
+                <ion-item class="rj-item">
+                    <div class="rj-contacts-pic">
+                        <img src="img/default.png">
+                    </div>
+                    <h2 class="num_name">揭晓动</h2>
+                </ion-item>
+                <ion-item class="rj-item">
+                    <div class="rj-contacts-pic">
+                        <img src="img/default.png">
+                    </div>
+                    <h2 class="num_name">康康</h2>
+                </ion-item>-->
+            </ion-list>
+        </div>
+    </ion-content>
+        <div class="rj-contacts-right-bar" rj-position-middle on-drag="contacts_right_bar_swipe($event)">
+        </div>
+        <div class="rj-contacts-middle-notice">
+        </div>
+
+</ion-view>

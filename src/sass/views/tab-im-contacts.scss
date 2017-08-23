@@ -1,0 +1,99 @@
+#tab-imcontacts {
+    @extend .deflash-blue;
+    ul li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        outline: 0;
+        -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+    }
+
+    input, img, textarea, span, div {
+        outline: 0;
+        -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+    }
+
+    #letter {
+        width: 100px;
+        height: 100px;
+        border-radius: 5px;
+        font-size: 75px;
+        color: rgba(26, 178, 155, 0.6);
+        text-align: center;
+        line-height: 100px;
+        background: rgba(145, 145, 145, 0.6);
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        margin: -50px 0px 0px -50px;
+        z-index: 99;
+        display: none;
+        img {
+            width: 50px;
+            height: 50px;
+            float: left;
+            margin: 25px 0px 0px 25px;
+        }
+    }
+
+    .sort_box {
+        width: 100%;
+        // padding-top: 45px;
+        overflow: hidden;
+    }
+
+    .sort_list {
+        border-radius: 3px;
+        padding: 0 60px 0 80px;
+        position: relative;
+        height: 60px;
+        line-height: 60px;
+        border-bottom: 1px solid #f2f2f2;
+        background: #FFFFFF;
+        .num_logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: absolute;
+            top: 5px;
+            left: 20px;
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .num_name {
+            color: #4D4E5D;
+            font-size: 14px;
+        }
+    }
+
+    .sort_letter {
+        height: 30px;
+        line-height: 30px;
+        padding-left: 20px;
+        color: #787878;
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .initials {
+        position: fixed;
+        top: 2px;
+        right: 0px;
+        height: 100%;
+        width: 15px;
+        padding-right: 10px;
+        text-align: center;
+        font-size: 12px;
+        z-index: 99;
+        background: rgba(145, 145, 145, 0);
+        li img {
+            width: 14px;
+        }
+    }
+}

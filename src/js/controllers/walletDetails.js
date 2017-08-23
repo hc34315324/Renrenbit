@@ -334,13 +334,18 @@ angular.module('copayApp.controllers').controller('walletDetailsController', fun
 
   $scope.$on("$ionicView.beforeEnter", function(event, data) {
     $scope.walletId = data.stateParams.walletId;
+    console.log("------------------");
+    console.log($scope.walletId);
     $scope.wallet = profileService.getWallet($scope.walletId);
+    console.log("------------------");
+    console.log($scope.wallet);
     if (!$scope.wallet) return;
     $scope.requiresMultipleSignatures = $scope.wallet.credentials.m > 1;
-
+    console.log($scope.wallet.credentials.m);
     addressbookService.list(function(err, ab) {
       if (err) $log.error(err);
       $scope.addressbook = ab || {};
+      console.log($scope.addressbook);
     });
 
     listeners = [

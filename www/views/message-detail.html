@@ -1,0 +1,106 @@
+<ion-view id="message-detial" hide-tabs>
+<!--<ion-header-bar align-title="left" class="bar-royal">
+    <div class="buttons">
+        <button class="button button-icon icon ion-arrow-left-c" ui-sref="tabs.message">
+        </button>
+    </div>
+    <div class="h1 title" ng-bind="message.fName"></div>
+    <div class="buttons">
+        <button class="button button-icon icon ion-person"></button>
+    </div>
+</ion-header-bar>-->
+<ion-nav-bar class="bar-royal" on-tap="onTap()">
+    <ion-nav-back-button>
+    </ion-nav-back-button>
+    <ion-nav-title>
+      <span translate ng-bind="message.fName"></span>
+    </ion-nav-title>
+    <ion-nav-buttons side="secondary">
+      <button class="button button-back button-clear ng-hide" ng-show="showAddIcon" ui-sref="tabs.addressbook.add">
+        <i class="icon ion-ios-plus-empty"></i>
+      </button>
+    </ion-nav-buttons>
+</ion-nav-bar>
+<ion-content class="rj-stable-content" delegate-handle="messageDetailsScroll" id="message-detail-content" on-tap="onTap()">
+	<ion-refresher pulling-text="..." on-refresh="doRefresh()" pulling-icon=""></ion-refresher>
+    <div ng-repeat="item in messageDetails">
+    	<p class="rj-message-time" ng-bind="item.time" ng-if="false"></p>
+        <div class="rj-message-wrap" ng-if="item.isFromMe == 0 && item.isMsgShow == 1">
+            <!--<img ng-src="{{message.fHead}}" class="rj-head-pic">-->
+            <img src="img/me.png" ng-src="{{item.fHead}}" class="rj-head-pic">
+            <span class="rj-triangle-left"></span>
+            <p class="rj-message" ng-bind="item.content"></p>
+        </div>
+        <div class="rj-message-wrap" ng-if="item.isFromMe == 0 && item.isReceiveShow == 1">
+            <img src="img/me.png" ng-src="{{item.fHead}}" class="rj-head-pic">
+            <span class="rj-triangle-left-t"></span>
+            <div class="rj-transfer">
+                <div class="r-transfer-icon"><i class="icon ion-loop"></i></div>
+                <div class="r-transfer-txt">向你发起收款<span class="r-transfer-amount">1000bits</span></div>
+                <div class="r-transfer-notice">
+                 <span class="r-transfer-notice-txt">人人比特转账</span>
+                </div>
+            </div>
+        </div>
+        <div class="rj-message-wrap" ng-if="item.isFromMe == 1 && item.isMsgShow == 1">
+            <img src="img/me.png" ng-src="{{item.fHead}}" class="rj-head-pic-right">
+            <span class="rj-triangle-right"></span>
+            <p class="rj-message-right" ng-bind="item.content"></p>
+        </div>
+        <div class="rj-message-wrap" ng-if="item.isFromMe == 1 && item.isReceiveShow == 1">
+            <img src="img/me.png" ng-src="{{item.fHead}}" class="rj-head-pic-right">
+            <span class="rj-triangle-right-t"></span>
+            <div class="rj-transfer-right">
+                <div class="r-transfer-icon"><i class="icon ion-loop"></i></div>
+                <div class="r-transfer-txt">向对方发起收款<span class="r-transfer-amount">1000bits</span></div>
+                <div class="r-transfer-notice">
+                 <span class="r-transfer-notice-txt">人人比特转账</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>
+<ion-footer-bar align-title="left" class="bar-light" resize-foot-bar>
+    <!--<div class="rj-footer-btn-wrap">
+        <button class="button button-icon icon ion-ios-mic-outline rj-footer-btn-left">
+        </button>
+    </div>-->
+    <div class="rj-footer-btn-wrap">
+        <button class="button button-icon icon ion-happy-outline rj-footer-btn-left">
+        </button>
+    </div>
+    <label class="item item-input rj-footer-input">
+        <textarea msd-elastic ng-model="send_content" class="rj-footer-textarea"></textarea>
+        <!--<div class="buttons">
+            <button class="rj-footer-btn button button-icon icon ion-happy-outline"></button>
+        </div>-->
+    </label>
+    <div class="rj-footer-btn-wrap">
+        <div class="buttons" ng-show="!send_content || send_content === ''">
+            <button class="button button-icon icon ion-ios-plus-outline rj-footer-btn-plus" ng-click="showplus()">
+            </button>
+        </div>
+        <div class="rj-send-button button button-balanced" ng-click="send(send_content)" ng-hide="!send_content || send_content === ''">
+            <p> 发送 </p>
+        </div>
+    </div>
+</ion-footer-bar>
+<div ng-show="isShowPlus" class="bottom-plus-items">
+    <div class="row">
+      <div class="col plus-item-col" ng-click="sendCoin()">
+        <div class="col-item"><i class="icon ion-arrow-swap item-icon"></i></div>
+        <div class="col-item-txt">转账</div>
+      </div>
+      <div class="col plus-item-col" ng-click="receiveCoin()">
+        <div class="col-item"><i class="icon ion-android-clipboard item-icon"></i></div>
+        <div class="col-item-txt">收款</div>
+      </div>
+      <div class="col plus-item-col">
+        <div class="col-demo"></div>
+      </div>
+      <div class="col plus-item-col">
+        <div class="col-demo"></div>
+      </div>
+    </div>
+</div>
+</ion-view>

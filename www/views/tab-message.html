@@ -1,0 +1,23 @@
+<ion-view>
+    <ion-header-bar align-title="left" class="bar-royal">
+        <div class="h1 title">信息</div>
+        <div class="buttons">
+            <button class="button no-animation button-icon icon ion-android-search">
+            </button>
+            <button class="button no-animation button-icon icon ion-android-add" ui-sref="tabs.newContactFromMessage({fromTag:'message'})">
+            </button>
+        </div>
+    </ion-header-bar>
+    
+    <ion-content on-swipe-left="onSwipeLeft()">
+        <ion-list rj-close-back-drop>
+            <ion-item class="item-avatar" ng-class="{'rj-item-top': message.isTop}" on-hold="popupMessageOpthins(message)" rj-hold-active ng-repeat="message in messages | orderBy:['isTop', 'lstMsg.timeFrom1970']:true" ng-click="messageDetails(message)">
+                <img src="img/default.png" ng-src="{{message.fHead}}">
+                <span class="rj-sm-red-icon" ng-show="message.showHints"><p ng-bind="message.noReadMessages"></p></span>
+                <h2 ng-bind="message.fName"></h2>
+                <p class="rj-list-p" ng-bind="message.lstMsg.content"></p>
+                <span class="rj-push-right" ng-bind="message.lstMsg.time"></span>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

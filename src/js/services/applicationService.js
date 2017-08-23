@@ -22,7 +22,7 @@ angular.module('copayApp.services')
           chrome.runtime.reload();
         } else if (isNW) {
           $ionicHistory.removeBackView();
-          $state.go('tabs.home');
+          $state.go('tabs.message');     //tabs.home //change by hc
           $timeout(function() {
             var win = require('nw.gui').Window.get();
             win.reload(3);

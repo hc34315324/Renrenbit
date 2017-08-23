@@ -1,7 +1,9 @@
 'use strict';
 
-angular.module('copayApp.controllers').controller('amountController', function($scope, $filter, $timeout, $ionicScrollDelegate, $ionicHistory, gettextCatalog, platformInfo, lodash, configService, rateService, $stateParams, $window, $state, $log, txFormatService, ongoingProcess, popupService, bwcError, payproService, profileService, bitcore, amazonService, nodeWebkitService) {
+angular.module('copayApp.controllers').controller('amountController', function($rootScope, $scope, $filter, $timeout, $ionicScrollDelegate, $ionicHistory, gettextCatalog, platformInfo, lodash, configService, rateService, $stateParams, $window, $state, $log, txFormatService, ongoingProcess, popupService, bwcError, payproService, profileService, bitcore, amazonService, nodeWebkitService) {
   var _id;
+  var from;         //从何而来
+  var action;       //收款或转账
   var unitToSatoshi;
   var satToUnit;
   var unitDecimals;
@@ -18,6 +20,13 @@ angular.module('copayApp.controllers').controller('amountController', function($
   $scope.$on("$ionicView.beforeEnter", function(event, data) {
     // Go to...
     _id = data.stateParams.id; // Optional (BitPay Card ID or Wallet ID)
+    from = $stateParams.from;
+    action = $stateParams.action;
+    $rootScope.action = action;
+    $rootScope.sendMsgTag = 0;
+    console.log(from);
+    console.log(action);
+    console.log("id>" + _id);
     $scope.nextStep = data.stateParams.nextStep;
     $scope.currency = data.stateParams.currency;
     $scope.forceCurrency = data.stateParams.forceCurrency;
@@ -30,6 +39,7 @@ angular.module('copayApp.controllers').controller('amountController', function($
     $scope.toEmail = data.stateParams.toEmail;
     $scope.showAlternativeAmount = !!$scope.nextStep;
     $scope.toColor = data.stateParams.toColor;
+    $scope.from = data.stateParams.from;
     $scope.showSendMax = false;
 
     if (!$scope.nextStep && !data.stateParams.toAddress) {
@@ -75,6 +85,8 @@ angular.module('copayApp.controllers').controller('amountController', function($
     satToUnit = 1 / unitToSatoshi;
     satToBtc = 1 / 100000000;
     unitDecimals = config.unitDecimals;
+    $rootScope.unitD = unitDecimals;    //判断单位
+    console.log(unitDecimals);
 
     $scope.resetAmount();
 
@@ -83,7 +95,9 @@ angular.module('copayApp.controllers').controller('amountController', function($
       $scope.amount = (($stateParams.toAmount) * satToUnit).toFixed(unitDecimals);
     }
 
-    processAmount();
+    if($scope.amount){
+      processAmount();
+    }
 
     $timeout(function() {
       $ionicScrollDelegate.resize();
@@ -223,7 +237,7 @@ angular.module('copayApp.controllers').controller('amountController', function($
   $scope.finish = function() {
     var _amount = evaluate(format($scope.amount));
 
-    if ($scope.nextStep) {
+    if ($scope.nextStep&&$scope.nextStep!="0") {
       $state.transitionTo($scope.nextStep, {
         id: _id,
         amount: $scope.useSendMax ? null : _amount,
@@ -232,15 +246,39 @@ angular.module('copayApp.controllers').controller('amountController', function($
       });
     } else {
       var amount = $scope.showAlternativeAmount ? fromFiat(_amount) : _amount;
-      $state.transitionTo('tabs.send.confirm', {
-        recipientType: $scope.recipientType,
-        toAmount: $scope.useSendMax ? null : (amount * unitToSatoshi).toFixed(0),
-        toAddress: $scope.toAddress,
-        toName: $scope.toName,
-        toEmail: $scope.toEmail,
-        toColor: $scope.toColor,
-        useSendMax: $scope.useSendMax
-      });
+      if($scope.from=='tabs-contacts'){
+        $state.transitionTo('tabs.contacts.confirm', {
+          recipientType: $scope.recipientType,
+          toAmount: $scope.useSendMax ? null : (amount * unitToSatoshi).toFixed(0),
+          toAddress: $scope.toAddress,
+          toName: $scope.toName,
+          toEmail: $scope.toEmail,
+          toColor: $scope.toColor,
+          useSendMax: $scope.useSendMax
+        });
+      }else
+      if(from=='messages-detial'){
+        console.log("action: " + action);
+        if(action==="send"){
+          $state.transitionTo('tabs.messages.confirm', {
+            recipientType: $scope.recipientType,
+            toAmount: $scope.useSendMax ? null : (amount * unitToSatoshi).toFixed(0),
+            toAddress: $scope.toAddress,
+            toName: $scope.toName,
+            toEmail: $scope.toEmail,
+            toColor: $scope.toColor,
+            useSendMax: $scope.useSendMax
+          });
+        }else
+        if(action==="receive"){
+            console.log("amount: " + amount + "  unitToSatoshi: " + (amount * unitToSatoshi).toFixed(0));
+            $rootScope.sendMsgTag=1;
+            $rootScope.msgAmount = amount;
+            $ionicHistory.goBack();              //返回上一页
+        }
+        
+      }
+      
     }
     $scope.useSendMax = null;
   };

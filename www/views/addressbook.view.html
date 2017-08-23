@@ -3,7 +3,7 @@
     <ion-nav-back-button>
     </ion-nav-back-button>
     <ion-nav-title>
-      <span>{{addressbookEntry.name}}</span>
+      <span translate="">User Info</span>
     </ion-nav-title>
   </ion-nav-bar>
   <ion-content scroll="false">
@@ -32,7 +32,7 @@
         <i class="icon bp-arrow-right"></i>
       </div>
       <div class="item item-divider"></div>
-      <div class="item has-click" ng-click="remove(addressbookEntry.address)">
+      <div class="item has-click" style="text-align:center;" ng-click="remove(addressbookEntry.address)">
         <span class="assertive" translate>Remove</span>
       </div>
     </div> 

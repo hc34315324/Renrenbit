@@ -8,15 +8,21 @@ angular.module('copayApp.controllers').controller('addressbookViewController', f
   $scope.addressbookEntry.address = $stateParams.address;
 
   $scope.sendTo = function() {
-    $ionicHistory.removeBackView();
-    $state.go('tabs.send');
-    $timeout(function() {
-      $state.transitionTo('tabs.send.amount', {
-        toAddress: $scope.addressbookEntry.address,
-        toName: $scope.addressbookEntry.name,
-        toEmail: $scope.addressbookEntry.email
-      });
-    }, 100);
+    // $ionicHistory.removeBackView();
+    // $state.go('tabs.send');
+    // $timeout(function() {
+    //   $state.transitionTo('tabs.contacts.amount', {
+    //     toAddress: $scope.addressbookEntry.address,
+    //     toName: $scope.addressbookEntry.name,
+    //     toEmail: $scope.addressbookEntry.email
+    //   });
+    // }, 100);
+    $state.go('tabs.contacts.amount', {
+      toAddress: $scope.addressbookEntry.address,
+      toName: $scope.addressbookEntry.name,
+      toEmail: $scope.addressbookEntry.email,
+      from: "tabs-contacts"
+    });
   };
 
   $scope.remove = function(addr) {

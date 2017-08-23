@@ -1,6 +1,7 @@
 <ion-tabs class="tabs-icon-top tabs-color-active-positive ion-tabs-transparent {{$root.hideTabs}}">
 
-  <ion-tab title="{{'Home'|translate}}" icon-off="ico-home" icon-on="ico-home-selected" ui-sref="tabs.home">
+  <!--change by hc 2017/6/12-->
+  <!--<ion-tab title="{{'Home'|translate}}" icon-off="ico-home" icon-on="ico-home-selected" ui-sref="tabs.home">
     <ion-nav-view name="tab-home"></ion-nav-view>
   </ion-tab>
 
@@ -18,5 +19,41 @@
 
   <ion-tab title="{{'Settings'|translate}}" icon-off="ico-settings" icon-on="ico-settings-selected" ui-sref="tabs.settings">
     <ion-nav-view name="tab-settings"></ion-nav-view>
+  </ion-tab>-->
+  <!--end 2017/6/12-->
+
+  <ion-tab badge="msgCounts" badge-style="badge-assertive" title="{{'Message'|translate}}" icon-off="ion-ios-chatbubble-outline" icon-on="ion-ios-chatbubble" ui-sref="tabs.message">
+    <ion-nav-view name="tab-message"></ion-nav-view>
   </ion-tab>
+
+  <ion-tab badge="newContacts" badge-style="badge-assertive" title="{{'Contacts'|translate}}" icon-off="ion-ios-people-outline" icon-on="ion-ios-people" ui-sref="tabs.contacts">
+    <ion-nav-view name="tab-contacts"></ion-nav-view>
+  </ion-tab>
+
+  <!--<ion-tab title="{{'Wallet'|translate}}" icon-off="icon ion-ios-box-outline" icon-on="ion-ios-box" ui-sref="tabs.receive">
+    <ion-nav-view name="tab-receive"></ion-nav-view>
+  </ion-tab>-->
+  <ion-tab title="{{'Wallet'|translate}}" icon-off="icon ion-ios-box-outline" icon-on="ion-ios-box" ui-sref="tabs.home">
+    <ion-nav-view name="tab-home"></ion-nav-view>
+  </ion-tab>
+  <!--<ion-tab title="{{'Send'|translate}}" icon-off="ico-send" icon-on="ico-send-selected" ui-sref="tabs.send">
+    <ion-nav-view name="tab-send"></ion-nav-view>
+  </ion-tab>-->
+
+  <ion-tab title="{{'Settings'|translate}}" icon-off="icon ion-ios-gear-outline" icon-on="icon ion-ios-gear" ui-sref="tabs.settings">
+    <ion-nav-view name="tab-settings"></ion-nav-view>
+  </ion-tab>
+
+  <!--<ion-tab title="{{'Demo'|translate}}" icon-off="icon ion-ios-gear-outline" icon-on="icon ion-ios-gear" ui-sref="tabs.demo">
+    <ion-nav-view name="tab-demo"></ion-nav-view>
+  </ion-tab>-->
+
+  <!--<ion-tab title="{{'Demo-WS'|translate}}" icon-off="icon ion-ios-gear-outline" icon-on="icon ion-ios-gear" ui-sref="tabs.demo-ws">
+    <ion-nav-view name="tab-demo-ws"></ion-nav-view>
+  </ion-tab>-->
+
+  <!--<ion-tab title="{{'Demo-Sqlite'|translate}}" icon-off="icon ion-ios-gear-outline" icon-on="icon ion-ios-gear" ui-sref="tabs.demo-sqlite">
+    <ion-nav-view name="tab-demo-sqlite"></ion-nav-view>
+  </ion-tab>-->
+  
 </ion-tabs>

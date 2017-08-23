@@ -47,14 +47,22 @@ angular.module('copayApp.services').factory('incomingData', function($log, $stat
     }
 
     function goSend(addr, amount, message) {
+      $log.debug("current ****************");
+      $log.debug($state.current.name);
       $state.go('tabs.send', {}, {
         'reload': true,
         'notify': $state.current.name == 'tabs.send' ? false : true
       });
       // Timeout is required to enable the "Back" button
       $timeout(function() {
+        $log.debug("*****amount: " + amount);
         if (amount) {
-          $state.transitionTo('tabs.send.confirm', {
+          // $state.transitionTo('tabs.send.confirm', {   //change by hc
+          //   toAmount: amount,
+          //   toAddress: addr,
+          //   description: message
+          // });
+          $state.transitionTo('tabs.home.confirm', {   //change by hc
             toAmount: amount,
             toAddress: addr,
             description: message
@@ -68,6 +76,10 @@ angular.module('copayApp.services').factory('incomingData', function($log, $stat
     }
     // data extensions for Payment Protocol with non-backwards-compatible request
     if ((/^bitcoin:\?r=[\w+]/).exec(data)) {
+      $log.debug("**************************");
+      $log.debug(data);
+      $log.debug("current*******************");
+      $log.debug($state.current.name);
       data = decodeURIComponent(data.replace('bitcoin:?r=', ''));
       $state.go('tabs.send', {}, {
         'reload': true,

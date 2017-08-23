@@ -224,8 +224,10 @@ angular.module('copayApp.services').factory('walletService', function($log, $tim
       root.isAddressUsed(wallet, balance.byAddress, function(err, used) {
         if (used) {
           $log.debug('Address used. Creating new');
+          console.log('Address used. Creating new');
           // Force new address
           root.getAddress(wallet, true, function(err, addr) {
+            console.log('New address: ', addr);
             $log.debug('New address: ', addr);
           });
         }
@@ -268,8 +270,10 @@ angular.module('copayApp.services').factory('walletService', function($log, $tim
     };
 
     function _getStatus(initStatusHash, tries, cb) {
+      console.log(initStatusHash);
       if (isStatusCached() && !opts.force) {
         $log.debug('Wallet status cache hit:' + wallet.id);
+        console.log('Wallet status cache hit:' + wallet.id);
         cacheStatus(wallet.cachedStatus);
         processPendingTxps(wallet.cachedStatus);
         return cb(null, wallet.cachedStatus);
@@ -283,6 +287,7 @@ angular.module('copayApp.services').factory('walletService', function($log, $tim
 
         var currentStatusHash = walletStatusHash(status);
         $log.debug('Status update. hash:' + currentStatusHash + ' Try:' + tries);
+        console.log('Status update. hash:' + currentStatusHash + ' Try:' + tries);
         if (opts.untilItChanges &&
           initStatusHash == currentStatusHash &&
           tries < root.WALLET_STATUS_MAX_TRIES &&

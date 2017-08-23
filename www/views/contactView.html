@@ -1,0 +1,50 @@
+<ion-view id="address-book-view" hide-tabs>
+  <ion-nav-bar class="bar-royal">
+    <ion-nav-buttons>  
+      <button ng-click="$ionicGoBack()" class="button back-button button-clear header-item">
+        <i class="icon icon ion-ios-arrow-thin-left"></i> 
+        <span class="back-text"></span>
+      </button>
+    </ion-nav-buttons>
+    <ion-nav-title>
+      <span translate="">User Info</span>
+    </ion-nav-title>
+    <ion-nav-buttons side="right">
+        <button ng-show="isAddContact" class="button no-animation button-icon icon ion-chatbubble-working" ng-click="contactWithHim()"></button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-content scroll="false">
+    <div class="gravatar-content">
+      <i class="icon big-icon-svg" ng-if="isChromeApp">
+        <img src="img/contact-placeholder.svg" class="bg"/>
+      </i>
+      <gravatar name="{{addressbookEntry.name}}" width="80" email="{{addressbookEntry.email}}" ng-if="!isChromeApp"></gravatar>
+    </div>
+    <div class="list">
+      <div class="item item-text-wrap">
+        <span class="address-book-field-label" translate>Name</span>
+        <span>{{addressbookEntry.name}}</span>
+      </div>
+      <div class="item item-text-wrap" ng-show="addressbookEntry.email">
+        <span class="address-book-field-label" translate>Email</span>
+        <span>{{addressbookEntry.email}}</span>
+      </div>
+      <div class="item item-text-wrap" copy-to-clipboard="addressbookEntry.address">
+        <span class="address-book-field-label" translate>Address</span>
+        <span>{{addressbookEntry.address}}</span>
+      </div>
+      <div class="item item-divider"></div>
+      <div class="item item-icon-right has-click" ng-show="hasAddress" ng-click="sendTo()">
+        <span class="positive" translate>Send Money</span>
+        <i class="icon bp-arrow-right"></i>
+      </div>
+      <div class="item item-divider"></div>
+      <div class="item has-click" style="text-align:center;" ng-show="isAddContact" ng-click="remove(addressbookEntry.address)">
+        <span class="assertive" translate>Remove</span>
+      </div>
+      <div class="item has-click" style="text-align:center;" ng-show="!isAddContact" ng-click="add(addressbookEntry.address)">
+        <span class="balanced" translate>Add</span>
+      </div>
+    </div> 
+  </ion-content>
+</ion-view>

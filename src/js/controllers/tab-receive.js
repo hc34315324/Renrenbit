@@ -67,7 +67,7 @@ angular.module('copayApp.controllers').controller('tabReceiveController', functi
 
   $scope.goToBackupFlow = function() {
     $state.go('tabs.receive.backupWarning', {
-      from: 'tabs.receive',
+      from: 'tabs.receive', 
       walletId: $scope.wallet.credentials.walletId
     });
   };

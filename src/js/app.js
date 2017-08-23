@@ -3,6 +3,7 @@
 var modules = [
   'angularMoment',
   'monospaced.qrcode',
+  'monospaced.elastic',
   'gettext',
   'ionic',
   'ionic-toast',

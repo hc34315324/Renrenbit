@@ -5,7 +5,7 @@ bwcModule.constant('MODULE_VERSION', '1.0.0');
 
 bwcModule.provider("bwcService", function() {
   var provider = {};
-
+  
   provider.$get = function() {
     var service = {};
 
@@ -34,7 +34,7 @@ bwcModule.provider("bwcService", function() {
 
       //note opts use `bwsurl` all lowercase;
       var bwc = new Client({
-        baseUrl: opts.bwsurl || 'https://bws.bitpay.com/bws/api',
+        baseUrl: opts.bwsurl || 'http://192.168.1.5:3232/bws/api',		//121.40.18.192:3232
         verbose: opts.verbose,
         timeout: 100000,
         transports: ['polling'],

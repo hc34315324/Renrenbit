@@ -27,7 +27,7 @@ msgid "(possible double spend)"
 msgstr "(二重払い可能性あり)"
 
 #: www/views/modals/txp-details.html:160
-msgid "* A payment proposal can be deleted if 1) you are the creator, and no other copayer has signed, or 2) 24 hours have passed since the proposal was created."
+msgid "* A payment proposal can be deleted if 1) you are the creator, and no other renrenbiter has signed, or 2) 24 hours have passed since the proposal was created."
 msgstr "* 送金の提案の取下げは①他のウォレット参加者に署名されていなかった場合、提案者に提案を取り下げることができます。②提案の起案から24時間が経っても解決しなかった場合、全員に取り下げることができます。"
 
 #: www/views/confirm.html:84
@@ -540,23 +540,23 @@ msgid "Contribute Translations"
 msgstr "翻訳に協力"
 
 #: src/js/services/bwcError.js:62
-msgid "Copayer already in this wallet"
+msgid "Renrenbiter already in this wallet"
 msgstr "ウォレット参加者が既に存在しています。"
 
 #: src/js/services/bwcError.js:77
-msgid "Copayer already voted on this spend proposal"
+msgid "Renrenbiter already voted on this spend proposal"
 msgstr "ウォレット参加者が既に送金の提案の意思表明をしています。"
 
 #: src/js/services/bwcError.js:107
-msgid "Copayer data mismatch"
+msgid "Renrenbiter data mismatch"
 msgstr "ウォレット参加者のデータ不整合"
 
 #: www/views/includes/walletActivity.html:2
-msgid "Copayer joined"
+msgid "Renrenbiter joined"
 msgstr "ウォレット参加者が加わりました"
 
 #: www/views/preferencesInformation.html:88
-msgid "Copayer {{$index}}"
+msgid "Renrenbiter {{$index}}"
 msgstr "ウォレット参加者 {{$index}}"
 
 #: src/js/controllers/copayers.js:79
@@ -1848,8 +1848,8 @@ msgid "Please tap each word in the correct order."
 msgstr "正しい順序で各単語をタップしてください。"
 
 #: src/js/services/bwcError.js:101
-msgid "Please upgrade Copay to perform this action"
-msgstr "この操作を実行するにはCopayを最新バージョンに更新してください"
+msgid "Please upgrade Renrenbit to perform this action"
+msgstr "この操作を実行するにはRenrenbitを最新バージョンに更新してください"
 
 #: src/js/controllers/import.js:205
 msgid "Please, select your backup file"
@@ -2248,7 +2248,7 @@ msgid "Share the love by inviting your friends."
 msgstr "是非友達と共有して下さい"
 
 #: www/views/copayers.html:21
-msgid "Share this invitation with your copayers"
+msgid "Share this invitation with your renenbiters"
 msgstr "ウォレット参加者に\n"
 "この招待コードを\n"
 "送って下さい。"
@@ -2571,7 +2571,7 @@ msgid "Total Locked Balance"
 msgstr "ロック中の残高"
 
 #: www/views/tab-create-shared.html:33
-msgid "Total number of copayers"
+msgid "Total number of renrenbiters"
 msgstr "参加人数を選択して下さい。"
 
 #: src/js/services/fingerprintService.js:63
@@ -2732,7 +2732,7 @@ msgid "Waiting for Trezor..."
 msgstr "Trezor を待っています..."
 
 #: www/views/copayers.html:49
-msgid "Waiting for copayers"
+msgid "Waiting for renrenbiters"
 msgstr "ウォレット参加者を待っています"
 
 #: www/views/copayers.html:54
@@ -2815,8 +2815,8 @@ msgid "Wallet already exists"
 msgstr "既存のウォレットです"
 
 #: src/js/services/profileService.js:498
-msgid "Wallet already in Copay"
-msgstr "Copay内の既存のウォレットです"
+msgid "Wallet already in Renrenbit"
+msgstr "Renrenbit内の既存のウォレットです"
 
 #: www/views/includes/walletActivity.html:6
 msgid "Wallet created"
@@ -3032,7 +3032,7 @@ msgstr "ウォレットは一度もクラウドへ保存されたりすること
 
 #: src/js/services/walletService.js:937
 msgid "Your wallet key will be encrypted. The Spending Password cannot be recovered. Be sure to write it down."
-msgstr "ウォレットの鍵が暗号化されます。Copayでは送金時のパスワードをリセットしてくれる機能がありませんので、パスワードを忘れないよう、控えておいて下さい。"
+msgstr "ウォレットの鍵が暗号化されます。Renenbitでは送金時のパスワードをリセットしてくれる機能がありませんので、パスワードを忘れないよう、控えておいて下さい。"
 
 #: www/views/includes/walletSelector.html:23
 #: www/views/paperWallet.html:35
@@ -3078,7 +3078,7 @@ msgid "to send"
 msgstr "送金する"
 
 #: www/views/preferencesBwsUrl.html:21
-msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Copayer synchronization. The default configuration points to https://bws.bitpay.com (BitPay's public BWS instance)."
+msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Renenbiter synchronization. The default configuration points to https://bws.bitpay.com (BitPay's public BWS instance)."
 msgstr "{{appName}}はブロックチェーンの情報を取得したり参加者を同期させたりするためにBitcore Wallet Service (BWS)に依存します。初期値としてBitPay社が提供する https://bws.bitpay.com (BitPay公式のBWSサーバー)を設定していますが、独自で運用してウォレットをそちらに接続しても構いません。"
 
 #: src/js/controllers/confirm.js:211

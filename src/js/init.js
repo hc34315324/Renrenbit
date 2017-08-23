@@ -21,12 +21,11 @@ angular.element(document).ready(function() {
 
   /* Cordova specific Init */
   if ('cordova' in window) {
-
+    
     window.handleOpenURL = handleOpenURL;
 
-
     document.addEventListener('deviceready', function() {
-
+      console.log('Device is Ready!');
       window.open = cordova.InAppBrowser.open;
 
       // Create a sticky event for handling the app being opened via a custom URL

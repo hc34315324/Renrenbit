@@ -1,8 +1,14 @@
 <ion-view id="backup-warning" class="onboarding" hide-tabs>
   <ion-nav-bar>
-    <ion-nav-buttons side="primary">
+    <!--<ion-nav-buttons side="primary">
       <button class="button button-back button-clear" ng-click="goBack()">
         <i class="icon ion-ios-arrow-thin-left"></i>
+      </button>
+    </ion-nav-buttons>-->
+    <ion-nav-buttons>  
+      <button ng-click="$ionicGoBack()" class="button back-button button-clear header-item">
+        <i class="icon icon ion-ios-arrow-thin-left"></i> 
+        <span class="back-text"></span>
       </button>
     </ion-nav-buttons>
   </ion-nav-bar>

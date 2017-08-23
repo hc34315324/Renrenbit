@@ -27,7 +27,7 @@ msgid "(possible double spend)"
 msgstr "(możliwa podwójna wypłata)"
 
 #: www/views/modals/txp-details.html:160
-msgid "* A payment proposal can be deleted if 1) you are the creator, and no other copayer has signed, or 2) 24 hours have passed since the proposal was created."
+msgid "* A payment proposal can be deleted if 1) you are the creator, and no other renrenbiter has signed, or 2) 24 hours have passed since the proposal was created."
 msgstr "* Wniosek wypłaty może być usunięty jeśli: 1) Po utworzeniu nie zatwierdził go żaden inny współwłaściciel portfela lub 2) minęły 24 godziny od kiedy wniosek został utworzony."
 
 #: www/views/confirm.html:84
@@ -538,23 +538,23 @@ msgid "Contribute Translations"
 msgstr "Wkład do tłumaczenia"
 
 #: src/js/services/bwcError.js:62
-msgid "Copayer already in this wallet"
+msgid "Renrenbiter already in this wallet"
 msgstr "Użytkownik jest już w tym portfelu"
 
 #: src/js/services/bwcError.js:77
-msgid "Copayer already voted on this spend proposal"
+msgid "Renrenbiter already voted on this spend proposal"
 msgstr "Użytkownik głosował już za tym wnioskiem wypłaty"
 
 #: src/js/services/bwcError.js:107
-msgid "Copayer data mismatch"
+msgid "Renrenbiter data mismatch"
 msgstr "Niezgodność danych współwłaściciela portfela"
 
 #: www/views/includes/walletActivity.html:2
-msgid "Copayer joined"
+msgid "Renrenbiter joined"
 msgstr "Współwłaściciel dołączył"
 
 #: www/views/preferencesInformation.html:88
-msgid "Copayer {{$index}}"
+msgid "Renrenbiter {{$index}}"
 msgstr "Współwłaściciele {{$index}}"
 
 #: src/js/controllers/copayers.js:79
@@ -1512,7 +1512,7 @@ msgstr "Wielu odbiorców"
 
 #: www/views/tab-import-phrase.html:8
 msgid "NOTE: To import a wallet from a 3rd party software, please go to Add Wallet &gt; Create Wallet, and specify the Recovery Phrase there."
-msgstr "Uwaga: Aby zaimportować portfel z oprogramowania innego niż Copay, przejdź do \"Dodaj portfel\" &gt; \"Utwórz portfel\", i podaj tam kluczową frazę."
+msgstr "Uwaga: Aby zaimportować portfel z oprogramowania innego niż Renrenbit, przejdź do \"Dodaj portfel\" &gt; \"Utwórz portfel\", i podaj tam kluczową frazę."
 
 #: www/views/addressbook.add.html:21
 #: www/views/addressbook.view.html:18
@@ -1846,8 +1846,8 @@ msgid "Please tap each word in the correct order."
 msgstr "Proszę wpisać każde słowo we właściwej kolejności."
 
 #: src/js/services/bwcError.js:101
-msgid "Please upgrade Copay to perform this action"
-msgstr "Proszę uaktualnić Copay, by móc wykonać tę operację"
+msgid "Please upgrade Renrenbit to perform this action"
+msgstr "Proszę uaktualnić Renrenbit, by móc wykonać tę operację"
 
 #: src/js/controllers/import.js:205
 msgid "Please, select your backup file"
@@ -2246,7 +2246,7 @@ msgid "Share the love by inviting your friends."
 msgstr "Podziel się miłością, zapraszając swoich przyjaciół."
 
 #: www/views/copayers.html:21
-msgid "Share this invitation with your copayers"
+msgid "Share this invitation with your renrenbiters"
 msgstr "Wyślij zaproszenie współwłaścicielom portfela"
 
 #: src/js/controllers/feedback/complete.js:5
@@ -2565,7 +2565,7 @@ msgid "Total Locked Balance"
 msgstr "Łącznie zablokowane środki"
 
 #: www/views/tab-create-shared.html:33
-msgid "Total number of copayers"
+msgid "Total number of renrenbiters"
 msgstr "Liczba współwłaścicieli portfela"
 
 #: src/js/services/fingerprintService.js:63
@@ -2726,7 +2726,7 @@ msgid "Waiting for Trezor..."
 msgstr "Oczekiwanie na Trezor..."
 
 #: www/views/copayers.html:49
-msgid "Waiting for copayers"
+msgid "Waiting for renrenbiters"
 msgstr "Oczekiwanie na współwłaścicieli portfela"
 
 #: www/views/copayers.html:54
@@ -2809,8 +2809,8 @@ msgid "Wallet already exists"
 msgstr "Portfel już istnieje"
 
 #: src/js/services/profileService.js:498
-msgid "Wallet already in Copay"
-msgstr "Portfel jest już w Copay"
+msgid "Wallet already in Renrenbit"
+msgstr "Portfel jest już w Renrenbit"
 
 #: www/views/includes/walletActivity.html:6
 msgid "Wallet created"
@@ -3072,7 +3072,7 @@ msgid "to send"
 msgstr "do wysłania"
 
 #: www/views/preferencesBwsUrl.html:21
-msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Copayer synchronization. The default configuration points to https://bws.bitpay.com (BitPay's public BWS instance)."
+msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Renrenbiter synchronization. The default configuration points to https://bws.bitpay.com (BitPay's public BWS instance)."
 msgstr "{{appName}} jest zależny od Bitcore Wallet Service (BWS) jeśli chodzi o informacje dotyczące blokcheina, sieci i synchronizacji współwłaścicieli portfela. Domyślnie jest to https://bws.bitpay.com (BitPay's public BWS instance)."
 
 #: src/js/controllers/confirm.js:211

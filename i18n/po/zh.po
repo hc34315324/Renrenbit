@@ -27,8 +27,8 @@ msgid "(possible double spend)"
 msgstr "（重复支付）"
 
 #: www/views/modals/txp-details.html:160
-msgid "* A payment proposal can be deleted if 1) you are the creator, and no other copayer has signed, or 2) 24 hours have passed since the proposal was created."
-msgstr "* 如果 1) 你是创造者，及没有其他 copayer 签名，或 2) 24 小时已经过去，支付提议将被删除。"
+msgid "* A payment proposal can be deleted if 1) you are the creator, and no other renrenbiter has signed, or 2) 24 hours have passed since the proposal was created."
+msgstr "* 如果 1) 你是创造者，及没有其他 renrenbiter 签名，或 2) 24 小时已经过去，支付提议将被删除。"
 
 #: www/views/confirm.html:84
 msgid "- {{feeRateStr}} of the transaction"
@@ -137,6 +137,10 @@ msgstr "地址"
 msgid "Address Book"
 msgstr "地址簿"
 
+#: www/views/newContacts.html:6
+msgid "new contacts"
+msgstr "添加朋友"
+
 #: www/views/preferencesInformation.html:35
 msgid "Address Type"
 msgstr "地址类型"
@@ -223,7 +227,7 @@ msgstr "确定取消和删除这个钱包？"
 
 #: src/js/controllers/addressbookView.js:24
 msgid "Are you sure you want to delete this contact?"
-msgstr ""
+msgstr "确认删除该联系人"
 
 #: src/js/controllers/preferencesDelete.js:26
 msgid "Are you sure you want to delete this wallet?"
@@ -538,24 +542,24 @@ msgid "Contribute Translations"
 msgstr "参与翻译"
 
 #: src/js/services/bwcError.js:62
-msgid "Copayer already in this wallet"
-msgstr "Copayer 已经在这个钱包里"
+msgid "Renrenbiter already in this wallet"
+msgstr "Renrenbiter 已经在这个钱包里"
 
 #: src/js/services/bwcError.js:77
-msgid "Copayer already voted on this spend proposal"
-msgstr "Copayer 已经表决此花费提议"
+msgid "Renrenbiter already voted on this spend proposal"
+msgstr "Renrenbiter 已经表决此花费提议"
 
 #: src/js/services/bwcError.js:107
-msgid "Copayer data mismatch"
-msgstr "Copayer 的数据不匹配"
+msgid "Renrenbiter data mismatch"
+msgstr "Renrenbiter 的数据不匹配"
 
 #: www/views/includes/walletActivity.html:2
-msgid "Copayer joined"
-msgstr "Copayer 加入"
+msgid "Renrenbiter joined"
+msgstr "Renrenbiter 加入"
 
 #: www/views/preferencesInformation.html:88
-msgid "Copayer {{$index}}"
-msgstr "Copayer {{$index}}"
+msgid "Renrenbiter {{$index}}"
+msgstr "Renrenbiter {{$index}}"
 
 #: src/js/controllers/copayers.js:79
 #: src/js/controllers/export.js:193
@@ -730,6 +734,14 @@ msgstr "自定义金额"
 #: www/views/tx-details.html:68
 msgid "Date"
 msgstr "日期"
+
+#: www/views/addressbook.view.html:36
+msgid "Add"
+msgstr "添加"
+
+#: www/views/newApplyContacts.html:6
+msgid "New Apply"
+msgstr "新的朋友"
 
 #: www/views/preferencesDeleteWallet.html:21
 msgid "Delete"
@@ -1178,7 +1190,11 @@ msgstr "隐藏高级选项"
 
 #: www/views/tabs.html:3
 msgid "Home"
-msgstr "主屏幕"
+msgstr "首页"
+
+#: www/views/tabs.html:26
+msgid "Message"
+msgstr "消息"
 
 #: src/js/controllers/feedback/send.js:61
 #: src/js/controllers/feedback/send.js:65
@@ -1555,7 +1571,19 @@ msgstr "没有备份，没有比特币。"
 
 #: www/views/addressbook.html:19
 msgid "No contacts yet"
-msgstr "然而没有联系人"
+msgstr "还没有联系人"
+
+#: www/views/newApplyContacts.html:19
+msgid "No recommend friends yet"
+msgstr "还没有推荐的朋友"
+
+#: www/views/newApplyContacts.html:19
+msgid "Add Or Invite Contacts"
+msgstr "添加或邀请朋友"
+
+#: www/views/newApplyContacts.html:19
+msgid "You can bind a phone number, in order to find more friends."
+msgstr "您可以绑定手机，以便找到更多的好友。"
 
 #: www/views/preferencesExternal.html:12
 msgid "No hardware information available."
@@ -1666,6 +1694,22 @@ msgstr "官方英文免责声明"
 #: src/js/controllers/feedback/send.js:64
 msgid "Oh no!"
 msgstr "出错。"
+
+#: www/views/tab-home.html:3
+msgid "Wallet"
+msgstr "钱包"
+
+#: www/views/tab-home.html:125
+msgid "Scan QRCode"
+msgstr "扫描二维码"
+
+#: www/views/tab-home.html:113
+msgid "Send BitCoin"
+msgstr "发送比特币"
+
+#: www/views/tab-home.html:119
+msgid "Receive BitCoin"
+msgstr "接收比特币"
 
 #: www/views/tab-home.html:38
 msgid "On this screen you can see all your wallets, accounts, and assets."
@@ -1846,8 +1890,8 @@ msgid "Please tap each word in the correct order."
 msgstr "请点击每个单词按照正确的顺序。"
 
 #: src/js/services/bwcError.js:101
-msgid "Please upgrade Copay to perform this action"
-msgstr "请升级 Copay 以执行此操作"
+msgid "Please upgrade Renrenbit to perform this action"
+msgstr "请升级 Renrenbit 以执行此操作"
 
 #: src/js/controllers/import.js:205
 msgid "Please, select your backup file"
@@ -1940,6 +1984,11 @@ msgstr "阅读少"
 msgid "Read more"
 msgstr "阅读更多"
 
+#: www/views/tab-imcontacts.html:3
+#: www/views/tabs.html:7
+msgid "Contacts"
+msgstr "联系人"
+
 #: www/views/tab-receive.html:3
 #: www/views/tabs.html:7
 msgid "Receive"
@@ -2008,9 +2057,13 @@ msgstr "拒绝付款方案"
 msgid "Release information"
 msgstr "发布信息"
 
+#: www/views/addressbook.view.html:6
+msgid "User Info"
+msgstr "用户信息"
+
 #: www/views/addressbook.view.html:36
 msgid "Remove"
-msgstr ""
+msgstr "删除"
 
 #: src/js/controllers/preferencesBitpayServices.js:7
 msgid "Remove BitPay Account?"
@@ -2044,7 +2097,7 @@ msgstr "请求指纹"
 
 #: www/views/tab-receive.html:45
 msgid "Request Specific amount"
-msgstr "请求特定量"
+msgstr "设置金额"
 
 #: www/views/preferences.html:47
 msgid "Request Spending Password"
@@ -2120,6 +2173,10 @@ msgstr "搜索交易"
 msgid "Search your currency"
 msgstr "搜索您的货币"
 
+#: www/views/newContacts.html:20
+msgid "Search Input Phone number or username"
+msgstr "搜索用户名/手机号"
+
 #: www/views/preferences.html:35
 msgid "Security"
 msgstr "安全"
@@ -2155,7 +2212,7 @@ msgstr "发送反馈"
 
 #: www/views/addressbook.view.html:31
 msgid "Send Money"
-msgstr "寄钱"
+msgstr "转账"
 
 #: www/views/allAddresses.html:19
 msgid "Send addresses by email"
@@ -2246,8 +2303,8 @@ msgid "Share the love by inviting your friends."
 msgstr "邀请您的朋友分享爱。"
 
 #: www/views/copayers.html:21
-msgid "Share this invitation with your copayers"
-msgstr "将此邀请与你的 copayers 共享"
+msgid "Share this invitation with your renrenbiters"
+msgstr "将此邀请与你的 renrenbiters 共享"
 
 #: src/js/controllers/feedback/complete.js:5
 #: www/views/tab-settings.html:36
@@ -2565,8 +2622,8 @@ msgid "Total Locked Balance"
 msgstr "锁定结余的总额"
 
 #: www/views/tab-create-shared.html:33
-msgid "Total number of copayers"
-msgstr "Copayers 的总数"
+msgid "Total number of renrenbiters"
+msgstr "Renrenbiters 的总数"
 
 #: src/js/services/fingerprintService.js:63
 #: src/js/services/fingerprintService.js:68
@@ -2726,12 +2783,16 @@ msgid "Waiting for Trezor..."
 msgstr "正在等待 Trezor..."
 
 #: www/views/copayers.html:49
-msgid "Waiting for copayers"
-msgstr "正在等待 copayers"
+msgid "Waiting for renrenbiters"
+msgstr "正在等待 renrenbiters"
 
 #: www/views/copayers.html:54
 msgid "Waiting..."
 msgstr "等待中..."
+
+#: www/views/tabs.html:34
+msgid "Wallet"
+msgstr "钱包"
 
 #: www/views/addresses.html:3
 #: www/views/preferencesAdvanced.html:17
@@ -2809,8 +2870,8 @@ msgid "Wallet already exists"
 msgstr "钱包已存在"
 
 #: src/js/services/profileService.js:498
-msgid "Wallet already in Copay"
-msgstr "钱包已经在 Copay"
+msgid "Wallet already in Renrenbit"
+msgstr "钱包已经在 Renrenbit"
 
 #: www/views/includes/walletActivity.html:6
 msgid "Wallet created"
@@ -3072,8 +3133,8 @@ msgid "to send"
 msgstr "发送"
 
 #: www/views/preferencesBwsUrl.html:21
-msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Copayer synchronization. The default configuration points to https://bws.bitpay.com (BitPay's public BWS instance)."
-msgstr "{{appName}} 中的区块链信息依赖于 Bitcore Wallet Service (BWS)、网络和 Copayer synchronization。默认配置指向 https://bws.bitpay.com (BitPay 的公共 BWS 实例)。"
+msgid "{{appName}} depends on Bitcore Wallet Service (BWS) for blockchain information, networking and Renrenbiter synchronization. The default configuration points to https://bws.bitpay.com (BitPay's public BWS instance)."
+msgstr "{{appName}} 中的区块链信息依赖于 Bitcore Wallet Service (BWS)、网络和 Renrenbiter synchronization。默认配置指向 https://bws.bitpay.com (BitPay 的公共 BWS 实例)。"
 
 #: src/js/controllers/confirm.js:211
 msgid "{{fee}} will be deducted for bitcoin networking fees."
